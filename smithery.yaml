@@ -1,0 +1,10 @@
+# Smithery configuration for protocolcodes
+# https://smithery.ai/docs/build/project-config
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required: []
+    properties: {}
+  commandFunction: |-
+    config => ({ command: 'uvx', args: ['--from', 'protocolcodes[mcp]', 'python', '-m', 'protocolcodes.mcp_server'] })
